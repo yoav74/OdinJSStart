@@ -1,6 +1,6 @@
 let ComputerScore = 0, PlayerScore = 0;
 let button, ScoreText, WinnerText;
-const MaxWins = 1;
+const MaxWins = 5;
 
 function RPS() {
     let Player = PlayerPick();
