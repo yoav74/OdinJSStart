@@ -82,8 +82,8 @@ function Score() {
 
 function main() {
     if (RPS() != -1) {
-        console.log("Player Score: " + PlayerScore + '\n' + "Computer Score: " + ComputerScore)
-        Score();
+        console.log("Player Score: " + PlayerScore + '\n' + "Computer Score: " + ComputerScore);
         UpdateScore("Player Score: " + PlayerScore + "      Computer Score: " + ComputerScore);
+        Score();
     }
 }
