@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-content: center;
     background-color: blueviolet;
-    min-height: 100vh;
+    min-height: 98vh;
     gap: 16px;
 
 }
@@ -43,4 +43,11 @@ img{
     width:400px;
     object-fit: contain;
     align-self: center;
+}
+
+.ver{
+    position: absolute;
+    bottom:0%;
+    text-align: right;
+    width: 98%;
 }
