@@ -28,3 +28,19 @@ button {
 #winner {
     font-size: 20px;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap:16px;
+}
+
+.container button{
+    height: 200px;
+}
+
+img{
+    width:400px;
+    object-fit: contain;
+    align-self: center;
+}
