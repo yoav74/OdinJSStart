@@ -1,19 +1,24 @@
 let ComputerScore = 0, PlayerScore = 0;
-let button, ScoreText, WinnerText;
+let buttons, ScoreText, WinnerText;
+let Img;
 const MaxWins = 3;
 
-function RPS() {
-    let Player = PlayerPick();
+function RPS(number) {
+    // let Player = PlayerPick(number);
     let ComputerPick = Math.floor(Math.random() * 3);
-    if (Player != null) {
-        if (Player == ComputerPick) {
+    let PickUpdate = "";
+    PickUpdate += "Player " + PrintRPS(number);
+    PickUpdate += "Computer " + PrintRPS(ComputerPick);
+    UpdatePick(PickUpdate);
+    if (number != null) {
+        if (number == ComputerPick) {
             return UpdateWinner("Draw");
         }
-        else if (Player == 0 && ComputerPick == 1 || Player == 1 && ComputerPick == 2 || Player == 2 && ComputerPick == 0) {
+        else if (number == 0 && ComputerPick == 1 || number == 1 && ComputerPick == 2 || number == 2 && ComputerPick == 0) {
             ComputerScore++;
             return UpdateWinner("Computer Won");
         }
-        else if (Player == 1 && ComputerPick == 0 || Player == 2 && ComputerPick == 1 || Player == 0 && ComputerPick == 2) {
+        else if (number == 1 && ComputerPick == 0 || number == 2 && ComputerPick == 1 || number == 0 && ComputerPick == 2) {
             PlayerScore++;
             return UpdateWinner("Player Win");
         }
@@ -22,37 +27,35 @@ function RPS() {
         return -1;
 }
 
-function PlayerPick() {
-    while (true) {
-        let num = prompt("Pick Rock, Paper or scissors");
-        if (num === null)
-            return;
-        num = String(num).toLowerCase();
-        if (num == "rock")
-            return '0';
-        else if (num == "paper")
-            return '1';
-        else if (num == "scissors")
-            return '2';
-        else {
-            console.log("Invalid input " + '\n');
-        }
-    }
-}
+// function PlayerPick() {
+//     while (true) {
+//         let num = prompt("Pick Rock, Paper or scissors");
+//         if (num === null)
+//             return;
+//         num = String(num).toLowerCase();
+//         if (num == "rock")
+//             return '0';
+//         else if (num == "paper")
+//             return '1';
+//         else if (num == "scissors")
+//             return '2';
+//         else {
+//             console.log("Invalid input " + '\n');
+//         }
+//     }
+// }
 
 function PrintRPS(pick) {
     if (pick == 0)
-        return " Picked Rock";
+        return "Picked Rock ";
     if (pick == 1)
-        return " Picked Paper"
+        return "Picked Paper "
     if (pick == 2)
-        return " Picked Scissors"
+        return "Picked Scissors "
 }
 function DisableButton() {
-    button.style.backgroundColor = "transparent";
-    button.style.border = "0px";
-    button.style.color = "transparent";
-    button.disabled = true;
+    buttons = document.querySelector(".container");
+    buttons.remove();
 }
 function UpdateWinner(text) {
     if (!WinnerText)
@@ -64,24 +67,33 @@ function UpdateScore(text) {
         ScoreText = document.getElementById("score");
     ScoreText.textContent = text;
 }
+function UpdatePick(text) {
+    const PickText = document.querySelector("#pick");
+    PickText.textContent = text;
+}
 
 function Score() {
-    if (!button)
-        button = document.getElementById("btn");
+    if (!buttons) {
+        // console.log(buttons[0].id);
+    }
     if (PlayerScore >= MaxWins) {
-        UpdateScore("You are victorious, you cannot play any more");
+        UpdateScore("You are victorious, now go celebrate");
         DisableButton();
+        Img.src = "Winner.jpg";
         return;
     }
     else if (ComputerScore >= MaxWins) {
-        UpdateScore("Loser, you cannot play any more");
+        UpdateScore("Keep your patiance, try again and you shall win");
         DisableButton();
+        Img.src = "loser.jpg";
         return;
     }
 }
 
-function main() {
-    if (RPS() != -1) {
+function main(num) {
+    if (!Img)
+        Img = document.querySelector("#EndingImage");
+    if (RPS(num) != -1) {
         console.log("Player Score: " + PlayerScore + '\n' + "Computer Score: " + ComputerScore);
         UpdateScore("Player Score: " + PlayerScore + "      Computer Score: " + ComputerScore);
         Score();
