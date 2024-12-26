@@ -31,6 +31,7 @@ body {
     align-content: center;
     margin: 10px;
     font-size: 36px;
+    border-radius: 10px;
 }
 
 button {
