@@ -1,0 +1,41 @@
+.calc{
+    border:solid 5px brown;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width:350px;
+    padding:7px;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:16px;
+    margin:0px;
+}
+
+#Display , #Display2{
+    height:50px;
+    align-content: center;
+    margin:10px;
+}
+button{
+    margin:3px;
+    background-color: aqua;
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    width:100vw;
+    text-align: center;
+    height:100px;
+    justify-content: space-around;
+}
+
+*{
+    font-size: 40px;
+}

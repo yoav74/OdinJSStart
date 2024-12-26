@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Calculator</title>
+</head>
+
+<body onload="OnLoad()">
+    <div class="header">Welcome to my Calculator</div>
+    <div class="calc">
+        <p id="Display2" style="background-color: lightgrey;">0</p>
+        <p id="Display" style="background-color: lightgrey;">0</p>
+        <div class="buttons">
+            <button onclick="UpdateDisplay('+')"> +</button>
+            <button onclick="UpdateDisplay('-')"> -</button>
+            <button onclick="UpdateDisplay('*')">*</button>
+            <button onclick="UpdateDisplay('/')">/</button>
+            <button onclick="UpdateDisplay(1)">1</button>
+            <button onclick="UpdateDisplay(2)">2</button>
+            <button onclick="UpdateDisplay(3)">3</button>
+            <button onclick="UpdateDisplay(4)">4</button>
+            <button onclick="UpdateDisplay(5)">5</button>
+            <button onclick="UpdateDisplay(6)">6</button>
+            <button onclick="UpdateDisplay(7)">7</button>
+            <button onclick="UpdateDisplay(8)">8</button>
+            <button onclick="UpdateDisplay(9)">9</button>
+            <button onclick="UpdateDisplay(0)">0</button>
+            <button onclick="UpdateDisplay('=')">=</button>
+            <button onclick="Clear()">Clear</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
