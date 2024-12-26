@@ -10,31 +10,33 @@
 </head>
 
 <body onload="OnLoad()">
-    <div class="header">Welcome to my Calculator</div>
-    <div class="calc">
-        <p id="Display2" style="background-color: lightgrey;">0</p>
-        <p id="Display" style="background-color: lightgrey;">0</p>
-        <div class="buttons">
-            <button onclick="UpdateDisplay('+')"> +</button>
-            <button onclick="UpdateDisplay('-')"> -</button>
-            <button onclick="UpdateDisplay('*')">*</button>
-            <button onclick="UpdateDisplay('/')">/</button>
-            <button onclick="UpdateDisplay(1)">1</button>
-            <button onclick="UpdateDisplay(2)">2</button>
-            <button onclick="UpdateDisplay(3)">3</button>
-            <button onclick="UpdateDisplay(4)">4</button>
-            <button onclick="UpdateDisplay(5)">5</button>
-            <button onclick="UpdateDisplay(6)">6</button>
-            <button onclick="UpdateDisplay(7)">7</button>
-            <button onclick="UpdateDisplay(8)">8</button>
-            <button onclick="UpdateDisplay(9)">9</button>
-            <button onclick="UpdateDisplay(0)">0</button>
-            <button onclick="UpdateDisplay('=')">=</button>
-            <button onclick="Clear()">Clear</button>
+    <div class="bodycont">
+        <div class="header">Welcome to my Calculator</div>
+        <div class="calc">
+            <p id="Display2" style="background-color: lightgrey;">0</p>
+            <p id="Display" style="background-color: lightgrey;">0</p>
+            <div class="buttons">
+                <button onclick="UpdateDisplay('+')"> +</button>
+                <button onclick="UpdateDisplay('-')"> -</button>
+                <button onclick="UpdateDisplay('*')">*</button>
+                <button onclick="UpdateDisplay('/')">/</button>
+                <button onclick="UpdateDisplay(1)">1</button>
+                <button onclick="UpdateDisplay(2)">2</button>
+                <button onclick="UpdateDisplay(3)">3</button>
+                <button onclick="UpdateDisplay(4)">4</button>
+                <button onclick="UpdateDisplay(5)">5</button>
+                <button onclick="UpdateDisplay(6)">6</button>
+                <button onclick="UpdateDisplay(7)">7</button>
+                <button onclick="UpdateDisplay(8)">8</button>
+                <button onclick="UpdateDisplay(9)">9</button>
+                <button onclick="UpdateDisplay(0)">0</button>
+                <button onclick="UpdateDisplay('=')">=</button>
+                <button onclick="Clear()">Clear</button>
+            </div>
+            <div class="footer" style="font-size: 14px;align-self: flex-end;">ver 0.2</div>
         </div>
-        <div class="footer" style="font-size: 14px;align-self: flex-end;">ver 0.2</div>
+        <a href="../index.html" style="font-size: 20px;align-self: flex-start;position:absolute; bottom: 0;margin:15px 15px;">back to main</a>
     </div>
-
 </body>
 
 </html>
