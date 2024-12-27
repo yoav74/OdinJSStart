@@ -13,11 +13,6 @@
     margin: 32px;
 }
 
-a {
-    text-decoration: none;
-    color: burlywood;
-}
-
 body {
     display: flex;
     flex-direction: column;
