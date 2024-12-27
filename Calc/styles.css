@@ -2,9 +2,6 @@ a {
     text-decoration: none;
     color: burlywood;
 }
-#active{
-    background-color: green;
-}
 
 .calc {
     border: solid 5px brown;

@@ -17,9 +17,6 @@ a {
     text-decoration: none;
     color: burlywood;
 }
-#active{
-    background-color: green;
-}
 
 body {
     display: flex;
