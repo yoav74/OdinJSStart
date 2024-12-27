@@ -1,3 +1,39 @@
+.navBar {
+    display: inline-flex !important;
+    height: 80px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    background-color: rgb(161, 96, 221) !important;
+    width: 100%;
+}
+
+.navBar>ul {
+    padding: 0 !important;
+    font-size: 24px;
+}
+
+.navBar>ul>li {
+    list-style: none !important;
+    display: inline !important;
+    padding: 8px !important;
+    border: 2px solid grey !important;
+    margin-left: 5px !important;
+    text-align: left !important;
+
+}
+
+.navBar>ul>li:hover {
+    background-color: bisque;
+}
+
+a {
+    text-decoration: none;
+    color: burlywood;
+}
+#active{
+    background-color: green;
+}
+
 .calc {
     border: solid 5px brown;
     display: flex;
@@ -12,17 +48,17 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    flex:1;
+    flex: 1;
     gap: 16px;
     margin: 0px;
     min-height: 100vh;
 }
 
-.bodycont{
+.bodycont {
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    font-size: 40px;
 }
 
 #Display,
@@ -38,7 +74,7 @@ button {
     margin: 3px;
     background-color: aqua;
     border-radius: 10px;
-    border:5px solid aqua;
+    border: 5px solid aqua;
 }
 
 .header {
@@ -49,9 +85,4 @@ button {
     text-align: center;
     height: 100px;
     justify-content: space-around;
-}
-
-* {
-    font-size: 40px;
-    
 }

@@ -1,0 +1,33 @@
+@import url('https://fonts.cdnfonts.com/css/edo-sz');
+
+
+
+table,
+td,
+th {
+    border: 1px solid antiquewhite;
+}
+
+td:hover,
+th:hover {
+    color: aqua;
+}
+
+td,
+th {
+    padding: 10px 20px;
+    text-align: center;
+}
+tr:first-child{
+    background-color: hotpink;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: grey;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
