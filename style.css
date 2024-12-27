@@ -89,14 +89,9 @@ body{
 #main.footer {
     display: flex;
     position: absolute;
-    bottom: 0%;
-    text-align: right;
+    bottom: 0;
     width: 98%;
     justify-content: space-between;
-}
-
-.footer a {
-    text-decoration: none;
-    align-self: center;
     color: rgb(210, 222, 53);
+    align-self: center;
 }
