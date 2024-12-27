@@ -1,13 +1,16 @@
-body {
+body#main{
     display: flex;
     flex-direction: column;
     text-align: center;
     flex-grow: 1;
     justify-content: center;
     align-content: center;
-    background-color: blueviolet;
     gap: 16px;
     margin:0;
+}
+
+body{
+    background-color: blueviolet;
 }
 #active{
     background-color: green;
@@ -20,6 +23,7 @@ body {
     margin: 0px !important;
     padding: 0px !important;
     background-color: rgb(161, 96, 221) !important;
+    width:100%;
     
 }
 .navBar>ul{
@@ -42,12 +46,12 @@ body {
     margin: 32px;
 }
 
-a {
+#main a {
     text-decoration: none;
     color: burlywood;
 }
 
-button {
+#main button {
     background-color: aqua;
     border-radius: 5px;
     border: 5px solid aqua;
@@ -66,23 +70,23 @@ button {
     font-size: 20px;
 }
 
-.container {
+#main.container {
     display: flex;
     justify-content: center;
     gap: 16px;
 }
 
-.container button {
+#main.container button {
     height: 200px;
 }
 
-img {
+#main img {
     width: 400px;
     object-fit: contain;
     align-self: center;
 }
 
-.footer {
+#main.footer {
     display: flex;
     position: absolute;
     bottom: 0%;

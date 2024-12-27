@@ -9,33 +9,6 @@
     align-self: center;
 }
 
-.navBar {
-    font-size: 24px;
-    display: inline-flex !important;
-    height: 80px !important;
-    margin: 0px !important;
-    padding: 0px !important;
-    background-color: rgb(161, 96, 221) !important;
-
-}
-
-.navBar>ul {
-    padding: 0 !important;
-}
-
-.navBar>ul>li {
-    list-style: none !important;
-    display: inline !important;
-    padding: 8px !important;
-    border: 2px solid grey !important;
-    margin-left: 5px !important;
-    text-align: left !important;
-}
-
-.navBar>ul>li:hover {
-    background-color: bisque;
-}
-
 .main div {
     margin: 32px;
 }
