@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <label for="first_name">*First name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="moti">
+            <label for="email">*Email:</label>
+            <input type="email" id="email" name="email" placeholder="you@gmail.com">
+            <select name="Your Mother">
+                <option value="" selected>Please Choose an option</option>
+                <optgroup label="meaning">
+                    <option value="zona">zona</option>
+                    <option value="aruma">aruma</option>
+                </optgroup>
+                <optgroup label="meaningless">
+                    <option value="on_me">on me</option>
+                    <option value="stam">stam</option>
+                </optgroup>
+            </select>
+            <div class="radio_btn">
+                <legend>Your favorite yakuza game?<legend>
+                        <div>
+                            <input type="radio" id="Yakuza_0" name="Yakuza" value="Yakuza_0">
+                            <label for="Yakuza_0">Yakuza 0</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Yakuza_1" name="Yakuza" value="Yakuza_1">
+                            <label for="Yakuza_1">Yakuza Kiwami</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Yakuza_2" name="Yakuza" value="Yakuza_2">
+                            <label for="Yakuza_2">Yakuza Kiwami 2</label>
+                        </div>
+            </div>
+            <button type="submit" class="Submit_btn" id="Submit_btn">Submit</button>
+        </fieldset>
+    </form>
+    <div class="Print_Form_Data">
+
+    </div>
+</body>
+
+</html>

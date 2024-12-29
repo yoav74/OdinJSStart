@@ -25,6 +25,7 @@ tr:first-child{
 }
 
 table {
+    table-layout: auto;
     border-collapse: collapse;
     background-color: grey;
 }

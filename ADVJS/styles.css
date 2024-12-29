@@ -1,0 +1,52 @@
+#tab {
+    border: 5px solid black;
+}
+
+th tr {
+    padding: 8px;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+}
+form{
+    border:5px solid black;
+    height:250px;
+    background-color: cadetblue;
+}
+form>*{
+    margin:16px;
+}
+
+body>* {
+    margin: 16px;
+}
+
+.field {
+    width: 60%;
+    margin: 8px;
+}
+
+table {
+    height:50px;
+    border-collapse: collapse;
+    background-color: wheat;
+}
+
+table>* {
+    text-align: center;
+}
+td,th{
+    height:50px;
+    width: 100px;
+}
+
+tr {
+    border-bottom: 5px solid black;
+
+}
+
+html{
+    background-color: aquamarine;
+}
