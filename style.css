@@ -100,3 +100,10 @@ a {
     color: rgb(210, 222, 53);
     align-self: center;
 }
+
+#main #resetBtn{
+    width:200px;
+    height:150px;
+    background-color: grey;
+    border:none;
+}

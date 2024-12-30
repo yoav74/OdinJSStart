@@ -1,6 +1,7 @@
 let ComputerScore = 0, PlayerScore = 0;
 let buttons, ScoreText, WinnerText;
 let Img;
+let buttonsCpy = document.createElement(null);
 const MaxWins = 3;
 
 function RPS(number) {
@@ -55,7 +56,16 @@ function PrintRPS(pick) {
 }
 function DisableButton() {
     buttons = document.querySelector(".container");
+    buttonsCpy = buttons.cloneNode(true);
+    console.log(buttonsCpy);
     buttons.remove();
+}
+
+function AddButton() {
+    // newCont.innerHTML = buttonsCpy.innerHTML;
+    const MainCont = document.querySelector(".main");
+    // console.log(newCont);
+    MainCont.insertBefore(buttonsCpy,document.querySelector("#EndingImage"));
 }
 function UpdateWinner(text) {
     if (!WinnerText)
@@ -98,4 +108,13 @@ function main(num) {
         UpdateScore("Player Score: " + PlayerScore + "      Computer Score: " + ComputerScore);
         Score();
     }
+}
+
+function reset() {
+    ComputerScore = 0, PlayerScore = 0;
+    UpdateScore("Welcome To Rock, Paper, Scissors");
+    UpdatePick("");
+    UpdateWinner("Best of 5");
+    Img.src = "";
+    AddButton();
 }
