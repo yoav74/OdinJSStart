@@ -3,7 +3,7 @@ function Load(num) {
         return;
     const Container = document.querySelector(".container")
     Container.innerHTML = '';
-    const squareSize = (800 / num);
+    const squareSize = (600 / num);
     for (let i = 0; i < (num * num); i++) {
         const divInside = document.createElement("div");
         divInside.style.width = `${squareSize}px`;
