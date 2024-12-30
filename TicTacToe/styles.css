@@ -9,8 +9,8 @@ body {
     display: grid;
     align-self: center;
     width: fit-content;
-    grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: repeat(3,150px);
+    grid-template-rows: repeat(3,150px);
     border: 5px solid black;
     background-color: bisque;
 }

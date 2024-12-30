@@ -5,7 +5,6 @@ let buttonsCpy = document.createElement(null);
 const MaxWins = 3;
 
 function RPS(number) {
-    // let Player = PlayerPick(number);
     let ComputerPick = Math.floor(Math.random() * 3);
     let PickUpdate = "";
     PickUpdate += "Player " + PrintRPS(number);
@@ -28,23 +27,6 @@ function RPS(number) {
         return -1;
 }
 
-// function PlayerPick() {
-//     while (true) {
-//         let num = prompt("Pick Rock, Paper or scissors");
-//         if (num === null)
-//             return;
-//         num = String(num).toLowerCase();
-//         if (num == "rock")
-//             return '0';
-//         else if (num == "paper")
-//             return '1';
-//         else if (num == "scissors")
-//             return '2';
-//         else {
-//             console.log("Invalid input " + '\n');
-//         }
-//     }
-// }
 
 function PrintRPS(pick) {
     if (pick == 0)
@@ -62,9 +44,7 @@ function DisableButton() {
 }
 
 function AddButton() {
-    // newCont.innerHTML = buttonsCpy.innerHTML;
     const MainCont = document.querySelector(".main");
-    // console.log(newCont);
     MainCont.insertBefore(buttonsCpy,document.querySelector("#EndingImage"));
 }
 function UpdateWinner(text) {
@@ -83,9 +63,6 @@ function UpdatePick(text) {
 }
 
 function Score() {
-    if (!buttons) {
-        // console.log(buttons[0].id);
-    }
     if (PlayerScore >= MaxWins) {
         UpdateScore("You are victorious, now go celebrate");
         DisableButton();
