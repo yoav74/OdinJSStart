@@ -7,15 +7,15 @@ class Grid_piece {
 
     }
     UpdateText() {
-        if (this.state == "empty"){
+        if (this.state == "empty") {
             this.text.textContent = null;
         }
-        else{
+        else {
             this.text.textContent = this.state;
         }
-        if(this.state == "X")
+        if (this.state == "X")
             this.text.style.color = "Red";
-        else if(this.state == "O")
+        else if (this.state == "O")
             this.text.style.color = "Blue";
     }
 }
@@ -55,9 +55,9 @@ function toggleTurn() {
 function UpdateUpperText() {
     currTurnText.textContent = `Current Turn: ${currTurn}`;
 }
-function UpdateWinner(text,winner) {
+function UpdateWinner(text, winner) {
     currTurnText.textContent = text;
-    if(winner == "O")
+    if (winner == "O")
         currTurnText.style.color = "Blue";
     else
         currTurnText.style.color = "Red";
@@ -80,17 +80,16 @@ function CheckStatus() {
     for (const combination of winningCombinations) {
         const [a, b, c] = combination;
         if (GridArr[a].state != "empty" && GridArr[a].state === GridArr[b].state && GridArr[a].state === GridArr[c].state) {
-            UpdateWinner("Winner : " + GridArr[a].state,GridArr[a].state) // Return the winner ('X' or 'O')
+            UpdateWinner("Winner : " + GridArr[a].state, GridArr[a].state) // Return the winner ('X' or 'O')
         }
     }
-    // return null;
 }
 
 function reset() {
     GridArr.forEach(element => {
         element.state = "empty";
         element.UpdateText();
-        Arr[GridArr.indexOf(element)].onclick = function(){insert(GridArr.indexOf(element)+1)};
+        Arr[GridArr.indexOf(element)].onclick = function () { insert(GridArr.indexOf(element) + 1) };
     })
     currTurn = "O";
     UpdateUpperText();
