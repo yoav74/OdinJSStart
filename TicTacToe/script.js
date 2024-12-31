@@ -21,6 +21,7 @@ class Grid_piece {
 }
 
 let currTurn = "O";
+let FilledPlaces = 0;
 const currTurnText = document.querySelector(".Curr_turn");
 const GridDiv = document.querySelectorAll(".grid_item");
 const Arr = Array.from(GridDiv);
@@ -39,6 +40,9 @@ function insert(index) {
         toggleTurn();
         UpdateUpperText();
         CheckStatus();
+        FilledPlaces++;
+        if(FilledPlaces >= 9)
+            UpdateWinner("Draw");
     }
     else {
         console.log("This cell is full");
@@ -59,8 +63,11 @@ function UpdateWinner(text, winner) {
     currTurnText.textContent = text;
     if (winner == "O")
         currTurnText.style.color = "Blue";
-    else
+    else if (winner == "X")
         currTurnText.style.color = "Red";
+    else{
+        currTurnText.style.color = "Yellow";
+    }
     Arr.forEach(element => {
         element.onclick = null;
     })
@@ -94,4 +101,5 @@ function reset() {
     currTurn = "O";
     UpdateUpperText();
     currTurnText.style.color = "Black";
+    FilledPlaces = 0;
 }
