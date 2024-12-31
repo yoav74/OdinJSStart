@@ -41,7 +41,7 @@ function insert(index) {
         UpdateUpperText();
         CheckStatus();
         FilledPlaces++;
-        if(FilledPlaces >= 9)
+        if (FilledPlaces >= 9)
             UpdateWinner("Draw");
     }
     else {
@@ -61,11 +61,15 @@ function UpdateUpperText() {
 }
 function UpdateWinner(text, winner) {
     currTurnText.textContent = text;
-    if (winner == "O")
+    if (winner == "O") {
         currTurnText.style.color = "Blue";
-    else if (winner == "X")
+        FilledPlaces = 0;
+    }
+    else if (winner == "X") {
         currTurnText.style.color = "Red";
-    else{
+        FilledPlaces = 0;
+    }
+    else {
         currTurnText.style.color = "Yellow";
     }
     Arr.forEach(element => {
