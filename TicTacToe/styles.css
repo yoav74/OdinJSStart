@@ -23,18 +23,19 @@ body {
 
 .grid_item {
     border: 1px solid black;
-    padding-bottom: 10px;
+    /* display:flex; */
 }
 
-.grid_item p {
+.grid_item span {
+    display:flex;
+    flex-wrap: wrap;
     text-align: center;
     align-content: center;
+    justify-content: center;
     width:150px;
-    height: 130px;
+    height: 150px;
     font-size: 200px;
-    margin-top:-45px;
-
-
+    margin:0;
 }
 .Curr_turn{
     align-self: center;

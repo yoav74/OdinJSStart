@@ -26,7 +26,7 @@ const GridDiv = document.querySelectorAll(".grid_item");
 const Arr = Array.from(GridDiv);
 const GridArr = []
 Arr.forEach((element) => {
-    const newText = document.createElement("p");
+    const newText = document.createElement("span");
     element.appendChild(newText);
     const newPiece = new Grid_piece(Arr.indexOf(element));
     GridArr.push(newPiece);
