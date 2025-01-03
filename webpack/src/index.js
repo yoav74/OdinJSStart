@@ -1,9 +1,5 @@
-import { greeting } from "./greeting";
+import { greeting, EventListeners } from "./greeting";
 import "./styles.css";
-import xdd from "../assets/xdd.png";
 
-
-const image = document.createElement("img");
-image.src = xdd;
-document.body.appendChild(image);
+EventListeners();
 console.log(greeting);
