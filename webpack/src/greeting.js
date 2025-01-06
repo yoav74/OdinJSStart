@@ -1,7 +1,7 @@
 export const greeting = "Hello World";
-import xddImg from "../assets/xdd.png";
-import schnitzel from "../assets/schnitzel.jpg";
-import burger from "../assets/burger.jpg";
+import xddImg from "../assets/xdd.webp";
+import schnitzel from "../assets/schnitzel.webp";
+import burger from "../assets/burger.webp";
 import pizza from "../assets/pizza.jpg";
 
 const HomeBtn = document.querySelector("#home");
